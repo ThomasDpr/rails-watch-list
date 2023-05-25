@@ -1,0 +1,9 @@
+<h1><%= @list.name %></h1>
+
+
+<div class="container">
+<%= link_to 'Revenirs aux listes', lists_path, class: 'btn btn-primary'  %>
+<%= link_to "Supprimer ma liste",
+  list_path(@list),
+  data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?"}, class: 'btn btn-primary' %>
+</div>

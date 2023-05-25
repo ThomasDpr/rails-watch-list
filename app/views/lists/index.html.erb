@@ -1,0 +1,11 @@
+<h1>Découvrez toutes nos listes</h1>
+
+<div class="container">
+  <ul>
+    <% @lists.each do |list| %>
+      <li class="card-body list-unstyled"><%= link_to list.name, list_path(list)%></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to "Ajouter une liste", new_list_path, class: 'btn btn-primary' %>
