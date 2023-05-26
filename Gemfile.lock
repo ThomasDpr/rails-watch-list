@@ -79,6 +79,10 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     execjs (2.8.1)
     faker (3.2.0)
@@ -88,6 +92,7 @@ GEM
       sassc (~> 2.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    htmlbeautifier (1.4.2)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -229,8 +234,10 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   debug
+  dotenv-rails
   faker
   font-awesome-sass (~> 6.1)
+  htmlbeautifier
   jbuilder
   jsbundling-rails
   pg (~> 1.1)

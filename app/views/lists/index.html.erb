@@ -1,15 +1,19 @@
-
-
-<h1>My lists</h1>
-
-<div class="card-category">
-    <% @lists.each do |list| %>
-      <li class="card-body list-unstyled">
-        <%= link_to list.name, list_path(list) %>
-        <br>
-        <%= link_to "delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?"}, class: 'btn btn-outline-secondary' %>
-    <% end %>
-  </ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+    <p>Classic</p>
+  </div>
 </div>
-<br>
+
+
+
 <%= link_to "Create a movie list", new_list_path, class: 'btn btn-outline-secondary' %>
+
+
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1534684686641-05569203ecca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80)">
+  <% @lists.each do |list| %>
+    <li class="card-body list-unstyled">
+      <%= link_to list.name, list_path(list) %>
+      <%= link_to "delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?"}, class: 'btn btn-outline-secondary' %>
+    <% end %>
+</div>
