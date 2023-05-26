@@ -1,2 +1,11 @@
-<h1>Bookmarks#new</h1>
-<%= bookmark: @bookmark %>
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :comment, input_html: { class: 'form-control' } %>
+    <%= f.association :movie, collection: Movie.all, prompt: "Choose a movie", input_html: { class: 'form-control' } %>
+  </div>
+
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

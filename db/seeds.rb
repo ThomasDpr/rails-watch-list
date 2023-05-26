@@ -8,6 +8,8 @@
 
 require 'faker'
 
+Bookmark.destroy_all
+List.destroy_all
 Movie.destroy_all
 
 50.times do
